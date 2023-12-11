@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 3%;
+}
+
+.column {
+  flex: 22%;
+  padding: 1.5em;
+  color: var(--deep-forest-green);
+}
+
+.column a{
+  color: var(--orange);
+  text-decoration: none;
+  padding-top: 0.7em;
+}
+
+.column a:hover {
+  color: var(--deep-forest-green);
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+  }
+}

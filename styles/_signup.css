@@ -1,0 +1,180 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#overlay {
+  display: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 999;
+  height: 100vh;
+}
+
+#overlay-box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--mint);
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 50%);
+}
+
+#overlay-box h2 {
+  background-color: var(--mint);
+  color: var(--deep-forest-green);
+  margin-top: 1em;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mint);
+  color: var(--deep-forest-green);
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em;
+  min-width: 400px;
+}
+
+.form h1 {
+  margin-bottom: 1em;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0.5em 0;
+  width: 100%;
+  margin-bottom: 0.8em;
+  flex-diretion: column;
+  align-items: space-between;
+  justify-content: stretch;
+}
+
+.form-group input {
+  height: 2.2em;
+}
+
+#first-name, #last-name, #email, #breed {
+  padding: 0.5em;
+  border: 1px solid var(--deep-forest-green);
+  outline: none;
+}
+
+fieldset {
+  display: flex;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--orange);
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--cream);
+}
+
+.results {
+  display: flex;
+  height: 100%;
+  background-color: var(--mint);
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around
+  background-color: var(--cream);
+  color: var(--deep-forest-green);
+  padding: 0.5em 0.2em;
+}
+
+.cell {
+  display: flex;
+  width: 200px;
+  justify-self: flex-start;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.fade-in {
+  display: block;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.fade-out {
+  -webkit-animation-name: fadeOut;
+ animation-name: fadeOut;
+ animation-duration: .5s;
+ animation-fill-mode: forwards;
+}
+
+.first-name-hint,
+.last-name-hint,
+.email-hint,
+.street-hint,
+.city-hint,
+.county-hint,
+.postal-hint,
+.checkbox-hint,
+.breed-hint {
+  display: none;
+  margin: 0.1em 0;
+  font-size: 1rem;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ef4444;
+}
+
+.checkbox-hint {
+  display: block;
+  text-align: left;
+}
+
+.button:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1;}
+  100% {opacity: 0;}
+}
